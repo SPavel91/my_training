@@ -1,4 +1,4 @@
-my_string = input("Что ты сейчас делаешь? ")
+my_string = input()    # не совсем понятна формулировка задания №2 "Организуйте программу", но думаю сделал то, что требуется.
 print(len(my_string))
 print(my_string .upper())
 print(my_string .lower())
