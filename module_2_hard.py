@@ -1,8 +1,6 @@
-Num_ = "Введите число от 3 до 20: "
-print(Num_)
 result_bug = []
 result = []
-n = int(input())
+n = int(input("Введите число от 3 до 20: "))
 
 while n < 3:
     print('Вы ввели не верное число, по пробуйте еще раз!')
