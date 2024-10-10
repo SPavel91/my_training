@@ -1,7 +1,7 @@
 com = "moc."
 ru = "ur."
 net = "ten."
-def send_email(message, recipient, *,sender = "university.help@gmail.com"):
+def send_email(message, recipient, *, sender = "university.help@gmail.com"):
     m = 0
     q = 0
     w = 0
