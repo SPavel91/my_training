@@ -5,9 +5,6 @@ def single_root_words(root_word = '' , *other_words):
         i_l = i.lower()
         if i_l.count(root_word_l):
             same_words.append(i)
-    for i in other_words:
-        root_word_l = root_word.lower()
-        i_l = i.lower()
         if root_word_l.count(i_l):
             same_words.append(i)
     return same_words
