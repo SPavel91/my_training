@@ -1,4 +1,4 @@
-def single_root_words(root_word = ' ' , *other_words):
+def single_root_words(root_word = '' , *other_words):
     same_words = []
     for i in other_words:
         root_word_l = root_word.lower()
