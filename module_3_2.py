@@ -40,6 +40,7 @@ def send_email(message, recipient, *, sender = "university.help@gmail.com"):
         print("Письмо успешно отправлено с адреса", sender, "на адрес", recipient)
     else:
         if r != 1:
+            return print("Невозможно отправить письмо с адреса", sender, "на адрес", recipient)
 
 
 
