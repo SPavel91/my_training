@@ -3,9 +3,7 @@ def single_root_words(root_word = '' , *other_words):
     for i in other_words:
         root_word_l = root_word.lower()
         i_l = i.lower()
-        if i_l.count(root_word_l):
-            same_words.append(i)
-        if root_word_l.count(i_l):
+        if root_word_l in i_l or i_l in root_word_l:
             same_words.append(i)
     return same_words
 
@@ -17,3 +15,4 @@ result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
 print(result1)
 
 print(result2)
+
