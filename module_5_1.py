@@ -6,8 +6,8 @@ class House:
 
 
     def go_to(self, new_floor):
-        self.new_floor = new_floor
-        if 1 <= self.new_floor <= self.number_of_floors:
+        if 1 <= new_floor <= self.number_of_floors:
+            self.new_floor = new_floor
             for floor in range(1, new_floor + 1):
                 print(floor)
         else:
