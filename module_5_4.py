@@ -2,7 +2,7 @@ class House:
     houses_history = []
 
 
-    def __new__(cls, *name, **kwargs):
+    def __new__(cls, *name):
         cls.houses_history.append(name[0])
         return object.__new__(cls)
 
