@@ -10,6 +10,7 @@ class User:
         if isinstance(age, int):
             self.age = age
 
+
 class Video:
     lib_videos = []
 
@@ -19,6 +20,7 @@ class Video:
         self.time_now = 0
         self.adult_mode = adult_mode
         Video.lib_videos.append(self)
+
 
 class UrTube:
 
@@ -71,7 +73,7 @@ class UrTube:
                     print(time_c, end=" ")
                     time.sleep(1)
                 print("Конец видео.")
-                self.current_user = self.current_user.nickname
+
 
 
 ur = UrTube()
@@ -94,7 +96,7 @@ ur.watch_video('Для чего девушкам парень программи
 
 # Проверка входа в другой аккаунт
 ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
-print(ur.current_user)
+print(ur.current_user.nickname)
 
 # Попытка воспроизведения несуществующего видео
 ur.watch_video('Лучший язык программирования 2024 года!')
