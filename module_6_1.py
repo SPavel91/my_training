@@ -6,12 +6,13 @@ class Animal:
         self.name = name
 
     def eat(self, food):
-        if food.edible and isinstance(food, Plant):
-            print(f'{self.name} съел {food.name}')
-            Animal.fed = True
-        else:
-            print(f'{self.name} не стал есть {food.name}')
-            Animal.alive = False
+        if isinstance(food, Plant):
+            if food.edible:
+                print(f'{self.name} съел {food.name}')
+                Animal.fed = True
+            else:
+                print(f'{self.name} не стал есть {food.name}')
+                Animal.alive = False
 
 
 class Plant:
