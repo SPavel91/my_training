@@ -26,12 +26,12 @@ class Vehicle:
         print(Vehicle.get_color(self))
         print(f'Владелец: {self.owner}')
 
+
     def set_color(self, new_color):
+        new_color = new_color.lower()
         if isinstance(new_color, str):
-            for color in range(len(self.__COLOR_VARIANTS)):
-                if self.__COLOR_VARIANTS[color].lower() == new_color.lower():
-                    self.__color = new_color
-                    break
+            if new_color in self.__COLOR_VARIANTS:
+                self.__color = new_color
             else:
                 print(f'Нельзя сменить цвет на {new_color}')
 
