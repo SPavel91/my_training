@@ -15,7 +15,7 @@ class Figure:
         return 0 <= r <= 255 and 0 <= g <= 255 and 0 <= b <= 255
 
     def set_color(self, r, g, b):
-        self.__color = list(self.__color)                 # меняет цвет
+        self.__color = list(self.__color)
         if self.__is_valid_color(r, g, b):
             self.__color[0] = r
             self.__color[1] = g
