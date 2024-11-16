@@ -25,7 +25,6 @@ class Shop:
 
     def add(self, *products):
         existing_products = self.get_products().splitlines()
-
         for product in products:
             if product.name not in [p.split(", ")[0] for p in existing_products]:
                 file = open(self.__file_name, 'a')
