@@ -11,8 +11,8 @@ class WordsFinder:
                 punctuation_chars = [',', '.', '!', '?', ';', ':', ' - ', '\n']
                 for char in punctuation_chars:
                     text = text.replace(char, ' ')
-                    text.split()
-                all_words[self.file_names[0]] = text.split()
+                    text.split(" ")
+                all_words[name] = text.split()
         return all_words
 
     def find(self, word):
@@ -21,7 +21,7 @@ class WordsFinder:
         for file_name, words in find_list.items():
             for index, w in enumerate(words):
                 if w == word_low:
-                    return {file_name: index + 1 for file_name in find_list}
+                    return {file_name: index + 1}
 
     def count(self, word):
         find_list = self.get_all_words()
