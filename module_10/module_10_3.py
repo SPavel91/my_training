@@ -34,7 +34,6 @@ class Bank(threading.Thread):
             sleep(0.001)
 
 
-
 bk = Bank()
 th1 = threading.Thread(target=Bank.deposit, args=(bk,))
 th2 = threading.Thread(target=Bank.take, args=(bk,))
