@@ -51,7 +51,6 @@ class Cafe:
                     print(f"{table.guest.name} покушал(-а) и ушёл(ушла)")
                     print(f"Стол номер {table.number} свободен")
                     table.guest = None
-
                 if table.guest is None and not self.queue.empty():
                     next_guest = self.queue.get()
                     table.guest = next_guest
