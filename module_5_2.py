@@ -22,19 +22,16 @@ class House:
         return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'
 
 
-
-
-
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
-# h1.go_to(5)
-# h2.go_to(10)
+h1.go_to(5)
+h2.go_to(10)
 # __str__
 print(h1)
 print(h2)
 
 # __len__
-#print(len(h1))
-#print(len(h2))
+print(len(h1))
+print(len(h2))
 
 
