@@ -1,4 +1,4 @@
-WARNING  root:tests_12_4.py:25 Неверный тип данных для объекта Runner: Имя может быть только строкой, передано int
+20:57:52 | WARNING | Неверный тип данных для объекта Runner: Имя может быть только строкой, передано int
 Traceback (most recent call last):
   File "C:\Users\slavi\PycharmProjects\pythonProject1\module_12\tests_12_4.py", line 21, in test_run
     runner = rt_with_exceptions.Runner(2)
@@ -6,7 +6,7 @@ Traceback (most recent call last):
   File "C:\Users\slavi\PycharmProjects\pythonProject1\module_12\rt_with_exceptions.py", line 6, in __init__
     raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
 TypeError: Имя может быть только строкой, передано int
-WARNING  root:tests_12_4.py:17 Неверная скорость для Runner: Скорость не может быть отрицательной, сейчас -5
+20:57:52 | WARNING | Неверная скорость для Runner: Скорость не может быть отрицательной, сейчас -5
 Traceback (most recent call last):
   File "C:\Users\slavi\PycharmProjects\pythonProject1\module_12\tests_12_4.py", line 13, in test_walk
     runner = rt_with_exceptions.Runner("Ivan", -5)
