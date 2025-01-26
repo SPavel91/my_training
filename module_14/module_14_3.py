@@ -25,7 +25,6 @@ button4 = InlineKeyboardButton(text='Формулы расчёта', callback_da
 kb_in.add(button3)
 kb_in.add(button4)
 
-
 kb_sell = InlineKeyboardMarkup(resize_keyboard = True)
 button6 = InlineKeyboardButton(text='Product1', callback_data='product_buying')
 button7 = InlineKeyboardButton(text='Product2', callback_data='product_buying')
@@ -36,11 +35,11 @@ kb_sell.add(button7)
 kb_sell.add(button8)
 kb_sell.add(button9)
 
-
 @dp.message_handler(commands=["start"])
 async def start(message):
     await message.answer('Привет! Я бот помогающий твоему здоровью.', reply_markup = kb)
     await message.answer('Хотите рассчитать свою норму калорий в день?')
+
 
 @dp.message_handler(text="Купить")
 async def get_buying_list(message):
@@ -50,9 +49,11 @@ async def get_buying_list(message):
             await message.answer_photo(img)
     await message.answer("Выберите продукт для покупки:", reply_markup=kb_sell)
 
+
 @dp.callback_query_handler(text="product_buying")
 async def send_confirm_message(call):
     await call.message.answer("Вы успешно приобрели продукт!")
+
 
 @dp.message_handler(text="Рассчитать")
 async def main_menu(message):
